@@ -54,7 +54,7 @@
     <orderEntry type="library" name="Leiningen: com.google.jsinterop/jsinterop-annotations:1.0.0" level="project" />
     <orderEntry type="library" name="Leiningen: com.google.protobuf/protobuf-java:3.0.2" level="project" />
     <orderEntry type="library" name="Leiningen: com.googlecode.json-simple/json-simple:1.1.1" level="project" />
-    <orderEntry type="library" name="Leiningen: com.h2database/h2:1.4.200" level="project" />
+    <orderEntry type="library" name="Leiningen: com.h2database/h2:1.4.199" level="project" />
     <orderEntry type="library" name="Leiningen: com.layerware/hugsql-adapter-next-jdbc:0.5.1" level="project" />
     <orderEntry type="library" name="Leiningen: com.layerware/hugsql-adapter:0.5.1" level="project" />
     <orderEntry type="library" name="Leiningen: com.layerware/hugsql-core:0.5.1" level="project" />
