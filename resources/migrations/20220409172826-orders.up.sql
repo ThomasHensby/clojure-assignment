@@ -1,5 +1,5 @@
 create table orders(
-    ordersId int auto_increment primary key,
+    ordersId int primary key,
     customersId int,
     foreign key (customersId) references customers(customersId),
     orderDate varchar(128),

@@ -1,7 +1,9 @@
 create table orderline(
-    orderlineId int auto_increment primary key,
+    orderlineId int primary key,
     ordersId int,
     foreign key (ordersId) references orders(ordersId),
-    itemId int,
+    sku varchar(128),
+    price float,
     quantity int);
 --;;
+
