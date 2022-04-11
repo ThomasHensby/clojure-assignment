@@ -1,11 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends "base.html" %}
+{% block content %}
+{% style """/css/main.css" %}
 
-    <title>Title</title>
-</head>
-<body>
+<main id="main-holder">
 
-</body>
-</html>
+    <h1> T-shirts to GO Dashboard</h1>
+    <form method="post" action="reviews" class="settings">
+        <table border="2" width="80%" align="center" >
+            <tr align="center">
+                <th> Stock Level </th>
+                <th> Size </th>
+                <th> Colour </th>
+                <th> Quality </th>
+                <th> Style </th>
+            </tr>
+            {% for item in items %}
+            <tr>
+                <td>{{item.stock}}</td>
+                <td>{{item.size}}</td>
+                <td>{{item.colour}}</td>
+                <td>{{item.quality}}</td>
+                <td>{{item.style}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+</main>
+
+{% endblock %}

@@ -8,6 +8,7 @@
     (= sku-size "01") "M"
     (= sku-size "02") "L"
     (= sku-size "03") "XL"
+    (= sku-size "04") "XL"
     ))
 
 (defn sku-colour
@@ -31,6 +32,7 @@
     (= sku-style "01") "Vest"
     ))
 
+
 (defn sku-iterpreter
   [sku]
 
@@ -42,3 +44,4 @@
                 (sku-style (nth split 3))
                 ]]
       item)))
+

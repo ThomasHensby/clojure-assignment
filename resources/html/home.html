@@ -1,49 +1,124 @@
 {% extends "base.html" %}
 
 {% block content %}
-<head>
-  <link rel="stylesheet" href="~/public/css/main.css" />
-</head>
+{% style """/css/main.css" %}
 <main id="main-holder">
 
 
-  <table border="1" >
-    <tr>
-      <th>Book id</th>
-      <th>Reviewer</th>
-      <th>Review</th>
-      <th>Published on</th>
-    </tr>
-    {% for item in items %}
-    <tr>
-      <td>{{item.book_id}}</td>
-      <td>{{item.reviewer}}</td>
-      <td>{{item.review}}</td>
-      <td>{{item.published}}</td>
-    </tr>
-    {% endfor %}
-  </table>
+      <h1> T-shirts to GO </h1>
+  <form method="post" action="reviews" class="settings">
+    <div class="flex-container">
+      <div class ="main">
+      <table border="2" width="80%" align="center" >
+        <tr align="center">
+          <div class = "t-shirt">
+            <th colspan="4">
+              <img src="/img/t-shirt.jpg">
+            </th>
+          </div>
+        </tr>
+        <tr align="center">
+          <div class = "style">
+            <th colspan="4">
+              <label>Choose a style: </label>
+              <br>
+              <select name="style" id="style">
+                <option value="t-shirt">T-shirt</option>
+                <option value="vest">Vest</option>
+              </select>
+            </th>
+          </div>
+        </tr>
+
+        <tr align="center" >
+          <th width="25">
+            <label>Choose a Size: </label>
+            <br>
+            <select name="Size" id="Size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+          </th>
+          <th width="25">
+            <label>Choose a Quality: </label>
+            <br>
+            <select name="Quality" id="Quality">
+              <option value="Standard">Standard</option>
+              <option value="Premium">Premium</option>
+            </select>
+          </th>
+          <th width="25">
+            <label>Choose a Colour: </label>
+            <br>
+            <select name="Colour" id="Colour">
+              <option value="Black">Black</option>
+              <option value="Red">Red</option>
+            </select>
+          </th>
+          <th width="25">
+            <label>Choose a Quantity: </label>
+              <input type="text" id="Quantity" name="Quantity" value="">
+
+          </th>
+        <tr align="center">
+            <th colspan="2">
+              <label>Choose a Print: </label>
+              <br>
+              <select name="print" id="print">
+                <option value="robot">Robot Top</option>
+                <option value="curry">Curry Top</option>
+                <option value="hot">Sexy Woman Top</option>
+              </select>
+            </th>
+            <th colspan="2">
+              <label>Total price: </label>
+              <br>
+              <label value="price"> £9.99 </label>
+            </th>
+        </tr>
+
+        </tr>
+      </table>
+      </div>
+
+      <div class="side">
+        <div style="padding:15px;">
+
+            {% csrf-field %}
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" value="">
+
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" value="">
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" value="">
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" value="">
+
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode" name="postcode" value="">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" value="">
+
+
+        </div>
+      </div>
+      <div class="bottom">
+        <input type="submit" value="Submit">
+      </div>
+    </div>
+
+  </form>
 
 
 
-  <div style="padding:15px;">
-    <form method="post" action="reviews" class="settings">
-      {% csrf-field %}
-      <label for="book_id">Book ID#</label>
-      <input type="text" id="book_id" name="book_id" value="">
 
-      <label for="reviewer">Reviewer</label>
-      <input type="text" id="reviewer" name="reviewer" value="">
 
-      <label for="review">Review</label>
-      <input type="text" id="review" name="review" value="">
-
-      <label for="published">Published</label>
-      <input type="text" id="published" name="published" value="">
-
-      <input type="submit" value="Submit">
-    </form>
-  </div>
 
 </main>
 
