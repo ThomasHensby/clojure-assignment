@@ -2,7 +2,7 @@
 
 generated using Luminus version "4.36"
 
-FIXME
+A Clojure Website for handing t-shirt sales.
 
 ## Prerequisites
 
